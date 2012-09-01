@@ -23,15 +23,20 @@
 	<font style=\"font-size:0.5em\">\n \
 	<pre>"
 
-//CSS color string
-static char html_color[64];
-
 #define OC_RED_INDEX	0
 #define OC_GREEN_INDEX	1
 #define OC_BLUE_INDEX	2
 static BYTE old_color[3];
-
+//CSS color string
+static char html_color[64];
 static char chars[] = {'0', '1'};
+
+static char *img_path;
+//width of output html picture
+static int out_width;
+//html or plain text, only html supported now
+static int out_type;
+
 
 static char next_char(void)
 {
@@ -54,10 +59,6 @@ static void make_html_color(BYTE red, BYTE green, BYTE blue)
 {
 	sprintf(html_color, "rgb(%d,%d,%d);\"", red, green, blue);
 }
-
-static char *img_path;
-static int out_width;
-static int out_type;
 
 static struct option long_opts[] = 
 {

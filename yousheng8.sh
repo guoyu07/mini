@@ -16,7 +16,7 @@ for (( i=first_chp;i<=last_chp;i++ )); do
 	link=`grep "\.mp3" curr.htm.utf8 | cut -d\" -f2`
 	echo "$link" #>>links
 	wget -nv -nc -c -O ${curr_chp}.mp3 $link
-#	curl -o ${curr_chp}.mp3 $link
+	#prozilla is much faster than wget
 #	proz $link
 done
 rm curr*

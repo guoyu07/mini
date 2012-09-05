@@ -14,7 +14,7 @@ last_chp=$5
 if test $# -ge 6; then
 	proz_threads=$6
 else
-	proz_threads=32
+	proz_threads=48
 fi
 
 for (( i=first_chp;i<=last_chp;i++ )); do

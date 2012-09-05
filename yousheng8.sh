@@ -3,9 +3,9 @@
 url_prefix="http://www1.yousheng8.com/"
 html_suffix=$1
 book=$2
-first_chp=$3
-last_chp=$4
-digits=$5
+digits=$3
+first_chp=$4
+last_chp=$5
 
 for (( i=first_chp;i<=last_chp;i++ )); do
 	curr_chp=`printf "%0${digits}d" $i`
